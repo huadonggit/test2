@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>块标签省略号 select点击实现切换</title>
+	<style>
+		.a{
+			width: 200px;
+		}
+		a{
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			display: block;
+		}
+		
+	</style>
+	<!-- <link rel="stylesheet" href="static/js/util.scss"> -->
+	<link rel="stylesheet" href="static/js/swiper.min.3.4.css">
+	<script type='text/javascript' src='static/js/jquery-1.10.1.min.js'></script>
+	<script type='text/javascript' src='static/js/swiper.min.3.4.js'></script>
+	<script type='text/javascript' src='static/js/util.js'></script>
+</head>
+<body>
+	<div class="a">
+		<a href="#">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</a>
+	</div>
+	<script>	
+		$(".Tab02>select").change(function(){
+	        $(this).parents(".Tab02").siblings(".cj-Tab02Con").find(".tab02list").children(".tab02Item ").eq($(this).val()).show().siblings().hide();
+	    });
+    </script>
+</body>
+</html>
